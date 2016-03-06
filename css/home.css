@@ -1,0 +1,193 @@
+/* CSS Document */
+
+
+/********************** order **********************/
+#shop{
+	margin-bottom:20px;	
+}
+
+.t1{
+	width:30%;
+}
+
+.t2{
+	width:22%;
+}
+
+.t4{
+	width:3%;
+}
+
+.t3{
+	width:20%;
+}
+
+#price{
+	width: 30px;
+}
+
+#shop th, #shop td{
+	padding-left:10px;
+	padding-right:10px;	
+}
+
+#shop tr.orange th{
+	color:#fff;
+	background-color:#f09e21;
+	height:45px;
+	font-size:1.1em;
+	border-bottom:2px solid #309245;
+	text-align:center;	
+}
+
+#shop th.item , #shop td.item{
+	text-align:left !important;
+	width:30%;	
+}
+
+th.border-gray, td.border-gray{
+	border-left:1px solid #e7e7e7;
+	border-right:1px solid #e7e7e7;
+}
+
+#shop td{
+	color:#000;
+	height:60px;
+	font-size:1em;
+	text-align:center;	
+}
+
+#shop tr:nth-child(even) td{
+	background-color:#f2f2f2;
+}
+
+#shop tr:nth-child(odd) td{
+	background-color:#fff;
+}
+
+#item-name{
+	color:#000;
+	font-size:1em;
+	font-weight:bold;
+}
+
+tr#final-price td{
+	height:45px;
+}
+
+.total{
+	border-bottom:3px solid #309245;
+}
+
+#tot-price{
+	color:#000;
+	font-size:1em;
+	font-weight:bold;
+}
+
+#price{
+	color:#f09e21;
+	font-size:1.3em;
+	font-weight:bold;
+}
+
+#sr{
+	color:#f09e21;
+	font-size:0.9em;
+	font-weight:bold;
+}
+
+.entryInput{
+	margin:0;
+	width:50%;
+	background-color: #f2f2f2;
+	border:0px;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-align:center;
+}
+
+.deleteEntry{
+	width:30px;
+	border:1px solid #d6d6d6;
+	text-align:center;
+	font-size:1.1em;
+	font-weight:bold;
+	color:#cbcbcb;
+
+}
+
+.confirm-order{
+	width:100%;
+	background-color:#309245;
+	color:#fff;
+	font-size:1.3em;
+	font-weight:bold;	
+	margin-bottom:125px;
+}
+
+.total-price{
+	width:50px;
+	background-color:transparent;
+	border:none;
+}
+
+.product-name{
+	width:100%;
+	background-color:transparent;
+	border:none;
+}
+
+.contact, .address{
+	width:95%;
+	border:1px solid #d6d6d6;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-align:center;
+	margin-bottom:15px;
+}
+
+
+.qty {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    float: left;
+}
+
+input.qtyplus {
+	border:none; 
+	background-color:transparent;
+	width:25px; 
+	height:25px;
+	float: left;
+}
+
+input.qtyminus {
+	border:none;  
+	width:25px; 
+	height:25px;
+	float: left;
+}
+
+.search-input{
+	border:none;
+	border-bottom:1px solid #ef9e22;
+	box-shadow:none;
+	border-radius:unset;
+	background-color:transparent;
+	display:block;
+}
+
+.search{
+	width:40px;
+	position: absolute;
+	margin:auto;
+	right: 0;
+	top: 0;
+	bottom:0;
+	border: none;
+	color:#ef9e22;
+	font-size:1.2em;
+	background-color:transparent;
+}
