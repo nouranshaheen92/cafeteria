@@ -1,0 +1,190 @@
+/* CSS Document */
+
+/***
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.eot'); /* IE9 Compat Modes 
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 
+       url('webfont.woff2') format('woff2'), /* Super Modern Browsers 
+       url('webfont.woff') format('woff'), /* Pretty Modern Browsers 
+       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS /
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS 
+}
+****/
+
+@font-face {
+    font-family: Open Sans;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+*{
+	box-sizing:inherit;
+	padding:0;
+	margin:0;
+	font-family:"Open Sans" !important;
+}
+
+body{
+	height:100vh;
+	padding:0 !important;
+	margin:0 !important;
+}
+
+input:hover , input:active , input:focus{
+	box-shadow:none;
+}
+
+.wbg{
+	background-color:#fff;
+}
+
+a{
+	text-decoration:none;
+	cursor:pointer;
+}
+.none{
+	padding:0 !important;
+	margin:0 !important;
+}
+
+.NR{
+	padding-right:0 !important;
+	margin-right:0 !important;
+}
+
+/****************** Login *********************/
+.login{
+	height:100vh;
+	display:block;
+	background-color:#c0d3c4;	
+}
+
+.cafe{
+	height:230px;
+	display:block;
+	margin-top:20px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.middle{
+	padding:0;
+	height:100px;
+	position:absolute;
+	margin:auto;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+}
+
+.middle input{
+	border:none;
+	border-radius:10px;
+	text-align:center;
+	background-color:#78344d;
+	color:#fff;
+	font-size:1.5em;
+	box-shadow:none;
+}
+ 
+.middle input::-webkit-input-placeholder {
+    color:rgba(255,255,255,0.2);
+}
+
+.middle input::-moz-placeholder {
+    color:rgba(255,255,255,0.2);
+}
+.middle input::-ms-input-placeholder {
+    color:rgba(255,255,255,0.2);
+}
+
+.middle input:hover , .middle input:focus , .middle input:active{
+	box-shadow:none;
+}
+
+.middle input.bbt{
+	border-bottom:1px solid #fff;	
+	margin-bottom: 20px;
+}
+
+.middle input.btp{
+	border-top:1px solid #fff;
+	margin-bottom: 40px;
+}
+
+.note{
+	margin:0;
+	color:#fff;
+	position:absolute;
+	right:0;
+	font-size:1em;	
+}
+
+.unote{
+	top:29px;	
+}
+
+.pnote{
+	bottom:36px;	
+}
+
+.MB{
+	margin-bottom:70px;	
+}
+
+.chup{
+	color:#fff;
+	text-decoration:underline;
+	font-size:1.2em;	
+}
+
+.loginB{
+	width:50px;
+	position:relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:transparent;
+	border:none;
+	color:#78344d;	
+	font-size: 2em;
+}
+
+.loginB:hover{
+	color:#6d6e71;	
+}
+
+#loginImg{
+	height:40px;
+}
+
+.PWME{
+	width:100%;
+	position:absolute;
+	display:block;
+	bottom:0;
+	text-align:right;
+}
+
+.PWME p{
+	float:right;
+	color:rgba(255,255,255,0.2);
+	font-size:1.3em;
+	line-height:65px;
+	margin:0;
+	padding-right:10px;
+}
+
+/************ Footer ***************/
+
+footer{
+	position:fixed;
+	background-color:#2980B9;
+	height:30px;
+	/*border-bottom:1px solid #f3f5f6;*/
+	overflow:hidden;
+	display:block;
+	z-index:1;
+}
+
