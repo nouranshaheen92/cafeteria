@@ -1,0 +1,108 @@
+<?php
+              if(isset($_SESSION['cart_item'])){
+                  $item_total = 0;
+
+                  if($_SESSION['customerId'] == 1)
+                  {   //echo $_SESSION['customerId'];
+                 ?>
+
+                <div class='form-group'>
+                  <label class='control-label col-sm-3' for='room'>Customer:</label>
+                  <div class='col-sm-9'>
+                    <select class='form-control MB' name='customerCartId' id='customerId'>
+                      <?php
+                     $users = DAL::getCustomers()->selectAll();
+      
+                      foreach($users as $usr)
+                      {
+                        $cstId = $usr->customerId ; 
+                        $cstName = $usr->customerName ; 
+                      ?>
+                      <option value='<?php echo $cstId; ?>'><?php echo $cstName; ?></option>
+                      <?php 
+                      }
+                      ?>
+                    </select>
+                  </div>
+                </div>
+                
+                <?php
+                  }
+              ?>  
+              <table cellpadding='10' cellspacing='1'>
+              <tbody>
+              <tr>
+              <th><strong>Name</strong></th>
+              <!-- <th><strong>Code</strong></th> -->
+              <th><strong>Quantity</strong></th>
+              <th><strong>Price</strong></th>
+              <th><strong>Action</strong></th>
+              </tr> 
+              <?php   
+                  foreach ($_SESSION['cart_item'] as $item){
+                  ?>
+                      <tr>
+                      <td><strong><?php echo $item['name']; ?></strong></td>
+                    <!--   <td><?php echo $item['code']; ?></td> 
+                      <td><?php echo $item['quantity']; ?></td> -->
+                      <td class='pQuntAdd'>
+                            <input type='button' value='-' class='qtyminus' field='<?= $item["code"] ?>' />
+                            <input type='text' name='<?= $item["code"] ?>' value='<?php echo $item["quantity"]; ?>' class='qty' id='qty' />
+                            <input type='button' value='+' class='qtyplus' field='<?= $item["code"] ?>' />
+                      </td>
+                      <td align=right><?php echo "LE".$item["price"]; ?></td>
+                      <td><a onClick="cartAction('remove','<?php echo $item["code"]; ?>')" class="btnRemoveAction cart-action">Remove Item</a></td>
+                      </tr>
+                     
+                      <?php
+                      $item_total += ($item["price"]*$item["quantity"]);
+                  }
+                  ?>
+
+              <tr>
+              <td colspan='5' align=right><strong>Total:</strong> <?php echo "$".$item_total; ?></td>
+              </tr>
+              </tbody>
+              </table>   
+
+                <div class='form-group'>
+                    <label class='control-label col-sm-2' for='email'>Notes:</label>
+                    <div class='col-sm-10'>
+                      <textarea class='form-control MB' type='text' name='confirm-product-notes' value=''></textarea>
+                    </div>
+                  </div>
+
+                  <div class='form-group'>
+                    <label class='control-label col-sm-2' for='room'>Room:</label>
+                    <div class='col-sm-10'>
+                      <select class='form-control MB' name='room' id='room'>
+                        <?php
+                        $rooms = DAL::getRooms()->selectAll();
+                      
+                        foreach($rooms as $rm)
+                        {
+                          $rId = $rm->roomId ; 
+                          $rmNumber = $rm->roomNumber;
+                        ?>
+                        <option value='<?php echo $rId; ?>'><?php echo $rmNumber; ?></option>
+                        <?php } ?>
+                      </select>
+                    </div>
+                  </div>
+
+                  <button id='addProductB' type='submit' name='confirmOrder' class='btn btn-default confirm-order'> 
+                    CONFIRM ORDER 
+                  </button>
+
+                <?php
+              }
+
+              else{
+                ?>
+                  <div class='alert alert-danger'>
+                      <strong>No products found</strong> in your cart!
+                  </div>
+              <?php
+              }
+
+              ?>
